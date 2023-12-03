@@ -2,60 +2,52 @@ package OOPs;
 
 public class abstraction {
     public static void main(String[] args) {
-        Horse h = new Horse();
-        // h.eat();
-        // h.walk();
-        // Chicken c = new Chicken();
-        // c.walk();
-
-        Mustang myHorse = new Mustang();
-        System.out.println(h.color);
+     Horse h = new Horse();
+     h.changeColor();
+     System.out.println(h.color);
     }
 }
 
 abstract class Annimal {
     String color;
-
-    Annimal() {
-        System.out.println("Animal constructor called");
+    Annimal(){
+        System.out.println("animal constructor called");
     }
-
     void eat() {
-        System.out.println("Eats food");
+        System.out.println("animal eats");
     }
 
     abstract void walk();
 }
 
 class Horse extends Annimal {
-    Horse() {
-        // super Keyword
-        super.color ="Brown";
+
+    Horse(){
         System.out.println("Horse constructor called");
     }
 
-    void changeColor() {
-        color = "Dark green";
+    void changeColor(){
+        color = "dark brown";
     }
-
     void walk() {
-        System.out.println("walks on 4 legs");
+        System.out.println("walks on 4 legs ");
     }
-
 }
+
 
 class Mustang extends Horse {
-    Mustang() {
-        System.out.println("Mustang constructor Called ");
+    Mustang (){
+        System.out.println("Mustang constructro called");
+    }
+}
+class Chicken extends Annimal {
+    
+    void changeColor(){
+        color = "yellow";
+    }
+    void walk() {
+        System.out.println("walks on 2 legs");
     }
 }
 
-// class Chicken extends Animal{
 
-// void changeColor(){
-// color = " yellow";
-// }
-// void walk(){
-// System.out.println("Eats grain");
-// }
-// }

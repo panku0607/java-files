@@ -2,57 +2,77 @@ package OOPs;
 
 public class interfaces {
         public static void main(String[] args) {
-            // Queen q = new Queen();
-            // q.moves();
+        //    Queen q = new Queen();
+        //    q.moves();
 
-
-                // Static Keyword 
-            Student s1 = new Student();
-            s1.Schoolname = "JVM";
-
-            Student s2 = new Student();
-            
-
-            Student s3 = new Student();
-            s3.Schoolname = "1176";
-            System.out.println(s2.Schoolname);
-            System.out.println(s1.Schoolname);
-            
+        Bear b = new Bear();
+        b.eat();
+        b.eatAnimal();
 
         }
 
 }
 
-    // interface ChessPlayer{
-    //     void moves();
-    // }
-    // class Queen implements ChessPlayer{
-    //     public void moves(){
-    //         System.out.println("Up ,Down , left , right , diagobnal dirns");
-    //     }
-    // }
-    // class Rook implements ChessPlayer{
-    //     public void moves(){
-    //         System.out.println("Up ,Down , left , right");
-    //     }
-    // }
-    // class King implements ChessPlayer{
-    //     public void moves(){
-    //         System.out.println("Up ,Down , left , right , diagobnal (by 1 step )");
-    //     }
-    // }
+// mutilple  inheritance
 
-    class Student{
-        String name;
-        int roll;
+interface Carnivorous {
+    void eatAnimal();
+}
 
-        static String Schoolname;
-        void setName(String name){
-            this.name = name;
-        }
+interface Herbivorous{
+    void eat();
+}
 
-        void getName(){
-           return this.name ;
-        }
+class Bear implements Herbivorous, Carnivorous{
+    public void eat(){
+        System.out.println("Eats grass and trees");
     }
+    public void eatAnimal(){
+        System.out.println("Eats animals");
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   interface ChessPlayer{
+    void moves();
+   }
+
+   class Queen implements ChessPlayer{
+    public void moves(){
+        System.out.println("up, down, right , left , diagonal, (in all direction)");
+    }
+   }
+
+    class Rook implements ChessPlayer{
+    public void moves(){
+        System.out.println("up, down, right , left ,");
+    }
+   }
+
+   
+    class King implements ChessPlayer{
+    public void moves(){
+        System.out.println("up, down, right , left ,(by 1 step)");
+    }
+   }
+
+
+    
 
