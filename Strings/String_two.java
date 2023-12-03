@@ -101,6 +101,44 @@ public class String_two {
      }
 
 
+     public static String vowels (String name){
+
+        Integer count = 0;
+        
+        for (int i = 0; i < name.length(); i++) {
+            char ch = name.charAt(i) ;
+            if ( ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u') {
+                count++;
+            }
+
+        }
+        return count.toString();
+     }
+
+
+     public static void anagrams(String str , String str2){
+
+        if (str.length() == str2.length()) {
+           char[] newStr = str.toCharArray();
+            char[]  newStr2 = str2.toCharArray();
+
+            Arrays.sort(newStr);
+            Arrays.sort(newStr2);
+
+            boolean result = Arrays.equals(newStr, newStr2);
+            if (result) {
+                System.out.println("It is a anagrams");
+            } else{
+                System.out.println("it is not a anagram");
+            }
+        }
+        else {
+            System.out.println("it is not a anagram");
+        }
+        
+
+     }
+
 
 
 
@@ -111,7 +149,7 @@ public class String_two {
 
         // // Strings are immutable
 
-        // Scanner sc = new Scanner(System.in);
+        Scanner sc = new Scanner(System.in);
         // String name = sc.nextLine();
         // System.out.println(name);
 
@@ -148,9 +186,16 @@ public class String_two {
         // String str = " hii, i am pankaj thakur, i will Master DSA in 4 Month";
         //     System.out.println(toUpperCase(str));
         
-        String str = "aaabbcccdd";
-        System.out.println(compress(str));
+        // String str = "aaabbcccdd";
+        // System.out.println(compress(str));
+
+        // String name = sc.nextLine();
+        // System.out.println("the no of vowels are " + vowels(name));
         
-        
+        String str =  "racecar" ;
+        String str2 = "careace";
+
+        anagrams(str, str2);
+
     }
 }

@@ -9,8 +9,8 @@ public class methodoverloading {
         System.out.println(calc.sum((float) 2.5, (float) 1.5));
         System.out.println(calc.sum(4, 3, 6));
 
-        bird b1 = new bird();
-        b1.eat();
+        // bird b1 = new bird();
+        // b1.eat();
     }
 }
 
@@ -27,14 +27,18 @@ class bird extends Animal{
     }
 }
 
+
+
 class Calculator{
-    int sum(int a , int b){
-        return a +b ;
+    int sum (int a , int b){
+        return a +b;
     }
+
     float sum(float a , float b){
-        return a + b;
+        return a + b ;
     }
-    int sum(int a , int b , int c){
-        return a +b + c;
+
+    int sum (int a , int b , int c){
+        return a + b + c ;
     }
 }
