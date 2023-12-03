@@ -15,7 +15,7 @@ public class methodoverloading {
 }
 
 
-// method overriding
+// method overriding  ---> Run time PolyMorphism
 class Animal{
         void eat(){
             System.out.println("eats animal");
@@ -28,7 +28,7 @@ class bird extends Animal{
 }
 
 
-
+ // Method over loading ---> Compile time polymorphism
 class Calculator{
     int sum (int a , int b){
         return a +b;
