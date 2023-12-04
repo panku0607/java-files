@@ -3,7 +3,7 @@ package OOPs;
 public class abstraction {
     public static void main(String[] args) {
      Horse h = new Horse();
-     h.changeColor();
+     
      System.out.println(h.color);
     }
 }
@@ -23,6 +23,8 @@ abstract class Annimal {
 class Horse extends Annimal {
 
     Horse(){
+       
+        super.color = "brown";
         System.out.println("Horse constructor called");
     }
 
