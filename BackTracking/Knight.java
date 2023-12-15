@@ -45,7 +45,7 @@ public class Knight {
 
     public static boolean solveHorse(int i , int j , int movei , int sol[][],int xMove[], int yMove[]){
             int k , next_i , next_j;
-            if(movei == N *N){
+            if(movei == N*N){
                 return true;
             }
 

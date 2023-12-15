@@ -44,7 +44,7 @@ public static int buyAndSell(int prices[]) {
     return maxProfit;
 }
 
-public static boolean checkcopy(int numbers[]){
+public static boolean checkcopy(int numbers[]){  // TC O(n^2)
 
     for(int i =0; i<numbers.length ; i++){
         for(int j= i +1; j < numbers.length ; j++ ){
@@ -57,60 +57,44 @@ public static boolean checkcopy(int numbers[]){
     return false;
 }
 
+public class SearchInRotatedSortedArray {
+    public static int search(int[] nums, int target) {
+        int left = 0;
+        int right = nums.length - 1;
 
+        while (left <= right) {
+            int mid = left + (right - left) / 2;
 
-public static int search(int[] nums , int target){
-    int min = search(nums);
+            if (nums[mid] == target) {
+                return mid;
+            }
 
-    if(nums[min] <= target && target <= nums[nums.length -1]){
-        return search(nums, min , nums.length-1 ,target);
-    }
-    else{
-        return search(nums , 0 , min, target);
-    }
-}
-
-public static int search(int[] nums , int left , int right, int target){
-    int l = left;
-    int r = right;
-
-    while(l <=r){
-        int mid = l + (r - l)/2;
-        if(nums[mid] == target){
-            return mid ;
+            if (nums[left] <= nums[mid]) {
+                // Left half is sorted
+                if (nums[left] <= target && target <= nums[mid]) {
+                    right = mid - 1;
+                } else {
+                    left = mid + 1;
+                }
+            } else {
+                // Right half is sorted
+                if (nums[mid] <= target && target <= nums[right]) {
+                    left = mid + 1;
+                } else {
+                    right = mid - 1;
+                }
+            }
         }
-        else if(nums[mid] > target){
-            r = mid -1 ;
-        }
-        else{
-            l = mid + 1;
-        }
+
+        return -1;
     }
-    return -1 ;
-}
 
 
-public static int search(int nums[]){
-    int left = 0; 
-    int right = nums.length -1;
-    while(left < right){
-     int mid = left + (right - left)/2;
-     if(mid > 0 && nums[mid -1] > nums[mid]){
-         return mid ;
-     }
-     else if(nums[left] <= nums[mid] && nums[mid] > nums[right]){
-         left = mid +1;
-     }
-     else{
-         right = mid-1;
-     }
-    }
-    return left;
-    
- }
 
 
- public static int profitSell(int[] prices){
+
+
+ public static int profitSell(int[] prices){ // O(n)
     int buyPrice = Integer.MAX_VALUE;
     int maxProfit = 0;
     for(int i = 0; i < prices.length ; i++){
@@ -126,7 +110,7 @@ public static int search(int nums[]){
 }
 
 
-public static int buildingWater(int height[]){
+public static int buildingWater(int height[]){ // O(n)
     int n = height.length;
     int leftMax[] = new int[n];
       leftMax[0] = height[0] ;
@@ -191,5 +175,6 @@ public static void main(String[] args) {
 
    
 
+}
 }
 }

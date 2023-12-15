@@ -16,7 +16,6 @@ public class Pattern_Part1 {
                 } else {
                     System.out.print(" ");
                 }
-
             }
             System.out.println();
         }
@@ -231,7 +230,7 @@ public class Pattern_Part1 {
         // butterFly(4);
         // solid_rhombus(5);
         // hollow_rhombus(5);
-        diamond(4);
+        // diamond(4);
 
 
 

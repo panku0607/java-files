@@ -20,17 +20,25 @@ public class basicSorting {
     
        for (int turn = 0; turn < arr.length -1 ; turn++) {
         int swap = 0;
+        boolean Swapping = false; // optimised bubble sort
             for (int j = 0; j < arr.length -1 - turn; j++) {
 
+                
                
                  if (arr[j] > arr[j+1]) {
                         int temp = arr[j];
                         arr[j] = arr[j+1];
                         arr[j+1] = temp;
 
+                        Swapping = true;
                         swap ++;
                     }
             }
+
+            if (Swapping == false) {
+                break;
+            }
+
         System.out.println("Swapping at turn " + turn + " = " + swap);
        }
         System.out.println();

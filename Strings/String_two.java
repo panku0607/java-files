@@ -183,8 +183,8 @@ public class String_two {
 
 
 
-        // String str = " hii, i am pankaj thakur, i will Master DSA in 4 Month";
-        //     System.out.println(toUpperCase(str));
+        String str = " hii, i am pankaj thakur, i will Master DSA in 4 Month";
+            System.out.println(toUpperCase(str));
         
         // String str = "aaabbcccdd";
         // System.out.println(compress(str));
@@ -192,10 +192,10 @@ public class String_two {
         // String name = sc.nextLine();
         // System.out.println("the no of vowels are " + vowels(name));
         
-        String str =  "racecar" ;
-        String str2 = "careace";
+        // String str =  "racecar" ;
+        // String str2 = "careace";
 
-        anagrams(str, str2);
+        // anagrams(str, str2);
 
     }
 }

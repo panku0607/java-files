@@ -222,11 +222,11 @@ public class practice {
 
 
     public static void main(String[] args) {
-        // String arr[] = { "sun " , "moon "   , "mercury" , "jupiter"};
-        // String a[] = mergeSort(arr, 0, arr.length -1);
-        // // for(int i =0 ; i < a.length ; i++){
-        // //     System.out.println(a[i]);
-        // // }
+        String arr[] = { "sun " , "earth "   , "mercury" , "mars"};
+        String a[] = mergeSort(arr, 0, arr.length -1);
+        for(int i =0 ; i < a.length ; i++){
+            System.out.println(a[i]);
+        }
 
         // printArr(a);
 
@@ -242,8 +242,8 @@ public class practice {
         // int arr [] = {20,6,4,5,1};
         // System.out.println("Inversion count = " +  getInversion(arr));
 
-        int x = 11;
-        System.out.println(floorSqrt(x));     
+        // int x = 11;
+        // System.out.println(floorSqrt(x));     
 
 
      }

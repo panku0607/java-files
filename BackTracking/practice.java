@@ -59,8 +59,8 @@ public class practice {
     // question no 2
 
     final static char[][] L = {{}, {}, {'a','b','c'}, {'d','e','f'}, 
-    {'g', 'h', 'i'}, {'j','k','l'}, {'m', 'l','n'},{'o', 'p', 'q'},
-    {'r','s','t'}, {'u','v','w'}, {'x','y','z'}};
+    {'g', 'h', 'i'}, {'j','k','l'}, {'m', 'n','0'},{'p', 'q', 'r','s'},
+    {'t','u', 'v'}, {'w','x','y','z'}};
 
     public static void letterCombination(String D){
         int len = D.length();
@@ -91,6 +91,6 @@ public class practice {
         //                 {0,1,0,0},
         //                 {1,1,1,1}};
         //     solveMaze(maze);
-        letterCombination("23");
+        letterCombination("89");
     }
 }

@@ -12,6 +12,7 @@ public class practice {
                 System.out.print(i + " ");
             }
          keyOccurance(arr, key, i + 1);
+         
                 }
 
             public static void printDigits(int n) {

@@ -3,7 +3,7 @@ import java.util.*;
 
 
 public class subarrays {
-    public static void subArrays(int numbers[]){
+    public static void subArrays(int numbers[]){  //O(n^3)
       int ts = 0; 
       int  currSum = 0;
         for (int i = 0; i < numbers.length; i++) {

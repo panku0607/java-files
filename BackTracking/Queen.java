@@ -1,105 +1,91 @@
 package BackTracking;
 
 public class Queen {
+
     public static boolean isSafe(char board[][], int row, int col) {
         // vertical up
-        for (int i = row - 1, j = col; i >= 0; i--) {
-            if (board[i][j] == 'Q') {
+        for (int i = row - 1; i >= 0; i--) {
+            if (board[i][col] == 'Q') {
                 return false;
             }
         }
 
-        // diag left up
+        // diag left
         for (int i = row - 1, j = col - 1; i >= 0 && j >= 0; i--, j--) {
             if (board[i][j] == 'Q') {
                 return false;
             }
         }
 
-        // dial right up
+        // diag right
+
         for (int i = row - 1, j = col + 1; i >= 0 && j < board.length; i--, j++) {
             if (board[i][j] == 'Q') {
                 return false;
             }
         }
-        return true;
 
+        return true;
     }
 
-    // public static void nQueen(char board[][] , int row){
-    // // base case
-    // if(row == board.length){
-    // count++;
-    // printChar(board);
-    // return;
-    // }
-
-    // //column loop
-    // for(int j = 0 ; j < board.length ; j++){
-    // if(isSafe(board , row , j)){
-    // board[row][j] = 'Q';
-    // nQueen(board, row + 1); // function call
-    // board[row][j] = 'x'; // backtrcaking step
-    // }
-    // }
-
-    // }
-
-    public static boolean nQueen(char board[][], int row) {
+    public static boolean nQueens(char board[][], int row) {
         // base case
         if (row == board.length) {
-            // count++;
-            // printChar(board);
+           // printBoard(board);
+          //  count ++ ;
             return true;
         }
-
-        // column loop
+        // recursion
         for (int j = 0; j < board.length; j++) {
+
             if (isSafe(board, row, j)) {
                 board[row][j] = 'Q';
-                if (nQueen(board, row + 1)) {
-                    return true;
-                }
-
-                board[row][j] = 'x'; // backtrcaking step
+              if(nQueens(board, row + 1)){      // function call
+                  
+                   return true;                             // backtracking step
             }
+            board[row][j] = 'x'; 
+
         }
-        return false;
-
+        
     }
+    return false ;
+}
 
-    public static void printChar(char board[][]) {
-        System.out.println("-------chess board--------");
+    public static void printBoard(char board[][]) {
+        System.out.println("--------chess board -------");
         for (int i = 0; i < board.length; i++) {
+
             for (int j = 0; j < board.length; j++) {
                 System.out.print(board[i][j] + " ");
             }
+
             System.out.println();
+
         }
 
     }
 
-    static int count = 0;
+    public static int count = 0;
 
     public static void main(String[] args) {
-        int n = 4;
+        int n = 2;
         char board[][] = new char[n][n];
-        // initialize
-        for (int i = 0; i < n; i++) {
-            for (int j = 0; j < n; j++) {
+        // initialise
+        for (int i = 0; i < board.length; i++) {
+            for (int j = 0; j < board.length; j++) {
                 board[i][j] = 'x';
             }
         }
 
-       if( nQueen(board, 0)) {
+       if(nQueens(board, 0)){
         System.out.println("solution is possible");
-        printChar(board);
-       }
-       else{
+        printBoard(board);
+       } else {
         System.out.println("solution is not possible");
        }
 
-        // System.out.println("total count: " + count);
+       // System.out.println("total ways to solve n queen: " + count);
 
     }
 }
