@@ -109,7 +109,7 @@ public class StackC_Frameworks {
                 if (s.isEmpty()) {
                     return false;
                 }
-
+            // closing 
                 if ((ch == ')' && s.peek() == '(')
                         || (ch == '}' && s.peek() == '{')
                         || (ch == ']' && s.peek() == '[')) {

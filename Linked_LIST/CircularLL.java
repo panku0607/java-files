@@ -3,7 +3,7 @@ package Linked_LIST;
 public class CircularLL {
     
 public class Node{
-    int data ;
+    public int data ;
     Node next ;
     public Node(int data){
         this.data = data ;
