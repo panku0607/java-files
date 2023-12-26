@@ -2,9 +2,7 @@ package Stacks;
 
 import java.util.*;
 
-import javax.swing.border.StrokeBorder;
 
-import EXAMS.forEachLoop;
 
 public class StackC_Frameworks {
     public static void pushAtBottom(Stack<Integer> s, int data) {
@@ -210,16 +208,16 @@ public class StackC_Frameworks {
 
         // Question 1
         // push at the bottom of the Stack
-        // Stack <Integer> s = new Stack<>();
-        // s.push(1);
-        // s.push(2);
-        // s.push(3);
+        Stack <Integer> s = new Stack<>();
+        s.push(1);
+        s.push(2);
+        s.push(3);
 
-        // pushAtBottom (s , 4);
+        pushAtBottom (s , 4);
 
-        // while (!s.isEmpty()) {
-        // System.out.println();
-        // }
+        while (!s.isEmpty()) {
+        System.out.println(s.pop());
+        }
 
         // Question 2
         // Reverse a string using Stack
@@ -274,8 +272,8 @@ public class StackC_Frameworks {
         // Question 8
         // Max area in Histogram
 
-        int arr[] = { 2, 4 }; // heigths in histogram
-        maxArea(arr);
+        // int arr[] = { 2, 4 }; // heigths in histogram
+        // maxArea(arr);
 
     }
 }

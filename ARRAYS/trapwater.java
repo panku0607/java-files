@@ -1,6 +1,8 @@
 package ARRAYS;
 import java.util.*;
 
+import LOOPS.star;
+
 public class trapwater {
     public static int trappedRainWater(int height[]){
     // caculate  left max boindary array 
@@ -133,14 +135,47 @@ public static int buildingWater(int height[]){ // O(n)
 }
 
 
+public static int targetinRotatedArray(int arr[] , int target){
+ int start = 0; 
+ int end = arr.length-1;
+
+    while (start <= end) {
+         int mid = start + (end - start)/2;
+
+
+         if (arr[mid] == target) {
+            return mid;
+         }
+         // leftside
+         if (arr[start] <= arr[mid]) {
+            
+         if (arr[start] <= target && target <= arr[ mid]) {
+            end = mid -1 ;
+         } else{
+            start = mid +1 ;
+         } 
+        }
+        else
+        {
+             if (arr[mid] <= target && target <= arr[end]) {
+            start = mid + 1 ;
+         } else{
+            end = mid -1 ;
+         }
+    }
+}
+    return -1;
+}
+
+
 
 
 
 
 
 public static void main(String[] args) {
-    int height[] = {4,2,0,6,3,2,5};
-    System.out.println(trappedRainWater(height));
+    // int height[] = {4,2,0,6,3,2,5};
+    // System.out.println(trappedRainWater(height));
 
     // int prices[] = {7,1,5,3,6,4};
     // System.out.println("The Max profit is at Day :" + buyAndSell(prices)); 
@@ -166,7 +201,9 @@ public static void main(String[] args) {
 
     // int numbers[] = { -1 , 0, 1, 2, -1, -4};
     
-    
+    int arr[] = {5,6,7,0,1,2,3};
+    int target = 7;
+    System.out.println(targetinRotatedArray(arr, target));
 
 
 
@@ -177,4 +214,4 @@ public static void main(String[] args) {
 
 }
 }
-}
+}  
