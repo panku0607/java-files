@@ -105,8 +105,9 @@ public class Queue_practice {
         int sum = 0;
         for (Job job : result) {
              sum  = sum + job.profit;
-            System.out.println(sum + " ");
+            
         }
+        System.out.println(sum + " ");
     }
 
     public static void reverseKelemnt (Queue <Integer> q , int k ){
@@ -131,6 +132,20 @@ public class Queue_practice {
 
     }
 
+    public static void maxSubAray(int arr[] , int k){
+        
+        for (int i = 0; i <= arr.length - k; i++) {
+            int max = 0;
+            for(int j = i ; j < i + k; j++){
+                if (max < arr[j] ) {
+                    max = arr[j];
+                }
+            }
+            System.out.println(max);
+        }
+        
+    }
+
     public static void main(String[] args) {
 
         // // binNumbers(5);
@@ -138,27 +153,32 @@ public class Queue_practice {
         // System.out.println(minCostForRopes(arr, 1));
 
 
-        // // JOb sequencing Algo
-        // ArrayList<Job> arr = new ArrayList<>();
-        // arr.add(new Job('a', 2, 100));
-        // arr.add(new Job('b', 1, 19));
-        // arr.add(new Job('c', 2, 27));
+        // JOb sequencing Algo
+        ArrayList<Job> arr = new ArrayList<>();
+        arr.add(new Job('a', 2, 100));
+        arr.add(new Job('b', 1, 19));
+        arr.add(new Job('c', 2, 27));
         // arr.add(new Job('d', 1, 25));
         // arr.add(new Job('e', 3, 15));
-        // printSchedulingJobs(arr);
+        printSchedulingJobs(arr);
 
-        Queue <Integer> q = new LinkedList<>();
-        q.add(10);
-        q.add(20);
-        q.add(30);
-        q.add(40);
-        q.add(50);
-        q.add(60);
-        q.add(70);
-        q.add(80);
-        q.add(90);
-        q.add(100);
-        reverseKelemnt(q, 7);
+        // Queue <Integer> q = new LinkedList<>();
+        // q.add(10);
+        // q.add(20);
+        // q.add(30);
+        // q.add(40);
+        // q.add(50);
+        // q.add(60);
+        // q.add(70);
+        // q.add(80);
+        // q.add(90);
+        // q.add(100);
+        // reverseKelemnt(q, 7);
+
+     
+    //    int[] arr= {2,1,3,7,6,7,5,2,6,7,6};
+    //    maxSubAray(arr, 3);
+
         
     }
 }
