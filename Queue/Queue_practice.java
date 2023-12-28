@@ -132,19 +132,42 @@ public class Queue_practice {
 
     }
 
-    public static void maxSubAray(int arr[] , int k){
+    public static void maxSubAray(int arr[] , int k){  //O(n*k)
         
         for (int i = 0; i <= arr.length - k; i++) {
-            int max = 0;
-            for(int j = i ; j < i + k; j++){
-                if (max < arr[j] ) {
-                    max = arr[j];
+            int max = arr[i];
+            for(int j = 1 ; j < k; j++){
+                if (max < arr[i+j] ) {
+                    max = arr[i+j];
                 }
             }
             System.out.println(max);
         }
         
     }
+
+    static void printMax(int arr[], int n, int k){  //O(n)
+        Deque<Integer> Qi = new LinkedList<Integer>();
+        int i;
+        for (i = 0; i < k; ++i) {
+        while (!Qi.isEmpty() && arr[i] >= arr[Qi.peekLast()]){
+             Qi.removeLast();
+        }
+        Qi.addLast(i);
+        }
+
+        for (; i < n; ++i) {
+        System.out.print(arr[Qi.peek()] + " ");
+        while ((!Qi.isEmpty()) && Qi.peek() <=  i - k){
+        Qi.removeFirst();
+        }
+        while ((!Qi.isEmpty()) && arr[i] >= arr[Qi.peekLast()]){
+        Qi.removeLast();
+        }
+        Qi.addLast(i);
+        }
+        System.out.print(arr[Qi.peek()]);
+        }
 
     public static void main(String[] args) {
 
@@ -153,14 +176,14 @@ public class Queue_practice {
         // System.out.println(minCostForRopes(arr, 1));
 
 
-        // JOb sequencing Algo
-        ArrayList<Job> arr = new ArrayList<>();
-        arr.add(new Job('a', 2, 100));
-        arr.add(new Job('b', 1, 19));
-        arr.add(new Job('c', 2, 27));
-        // arr.add(new Job('d', 1, 25));
-        // arr.add(new Job('e', 3, 15));
-        printSchedulingJobs(arr);
+        // // JOb sequencing Algo
+        // ArrayList<Job> arr = new ArrayList<>();
+        // arr.add(new Job('a', 2, 100));
+        // arr.add(new Job('b', 1, 19));
+        // arr.add(new Job('c', 2, 27));
+        // // arr.add(new Job('d', 1, 25));
+        // // arr.add(new Job('e', 3, 15));
+        // printSchedulingJobs(arr);
 
         // Queue <Integer> q = new LinkedList<>();
         // q.add(10);
@@ -178,6 +201,10 @@ public class Queue_practice {
      
     //    int[] arr= {2,1,3,7,6,7,5,2,6,7,6};
     //    maxSubAray(arr, 3);
+    int arr[] = {12,1,78,90,57,89,56};
+maxSubAray(arr, 3);
+// printMax(arr, 9, 3);
+
 
         
     }

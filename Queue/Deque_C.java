@@ -37,13 +37,15 @@ public class Deque_C {
     }
 
     public static void main(String[] args) {
-        // Deque <Integer> deque = new LinkedList<>();
+        Deque <Integer> deque = new LinkedList<>();
 
-        // deque.addFirst(1);
-        // deque.addFirst(2);
-        // deque.addLast(3);
-        // deque.addLast(4);
-        // System.out.println(deque);
+        deque.addFirst(1);
+        deque.addFirst(2);
+        deque.addLast(3);
+        deque.addLast(4);
+        System.out.println(deque);
+
+        System.out.println(deque.peekLast());
         // deque.removeFirst();
         // deque.removeLast();
 
@@ -65,16 +67,16 @@ public class Deque_C {
         // System.out.println(s.pop());
 
 
-        // making queue using deque 
-        Queue q = new Queue();
-        q.add(1);
-        q.add(2);
-        q.add(3);
+        // // making queue using deque 
+        // Queue q = new Queue();
+        // q.add(1);
+        // q.add(2);
+        // q.add(3);
 
-        System.out.println("top = " + q.peek());
-        System.out.println(q.remove());
-        System.out.println(q.remove());
-        System.out.println(q.remove());
+        // System.out.println("top = " + q.peek());
+        // System.out.println(q.remove());
+        // System.out.println(q.remove());
+        // System.out.println(q.remove());
 
     }
 }
