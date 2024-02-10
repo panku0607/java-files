@@ -271,10 +271,10 @@ public class BinaryTreeB {
 
 
     public static void main(String[] args) {
-        // int nodes[] = { 1, 2, 4, -1, -1, 5, -1, -1, 3, -1, 6, -1, -1 };
-        // BinaryTree tree = new BinaryTree();
+        int nodes[] = { 1, 2, 4, -1, -1, 5, -1, -1, 3, -1, 6, -1, -1 };
+        BinaryTree tree = new BinaryTree();
 
-        // Node root = tree.buildTree(nodes);
+        Node root = tree.buildTree(nodes);
        
         // tree.preorder(root);
         // System.out.println();
@@ -293,15 +293,15 @@ public class BinaryTreeB {
          */
 
 
-         Node root = new Node(1);
-         root.left = new Node(2);
-         root.right = new Node(3);
-         root.left.left = new Node(4);
-         root.left.right = new Node(5);
-         root.right.left = new Node(6);
-         root.right.right = new Node(7);
+        //  Node root = new Node(1);
+        //  root.left = new Node(2);
+        //  root.right = new Node(3);
+        //  root.left.left = new Node(4);
+        //  root.left.right = new Node(5);
+        //  root.right.left = new Node(6);
+        //  root.right.right = new Node(7);
 
-         topView(root);
+        //  topView(root);
 
 
             /*        2     

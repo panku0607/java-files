@@ -2,7 +2,7 @@ package OOPs;
 
 import java.util.Scanner;
 
-class Complex {
+  class Complex {
     int real ;
     int imag;
 
@@ -37,19 +37,72 @@ class Complex {
 }
 
 
+public class AtmCard {
+    private String cardNumber;
+    private String userName;
+    private String Address;
+    private int number;
+    private String password;
 
-public class practice {
+    // Constructor
+    public AtmCard(String cardNumber, String userName, String Address, int number, String password) {
+        this.cardNumber = cardNumber;
+        this.userName = userName;
+        this.Address = Address;
+        this.number = number;
+        this.password = password;
+    }
+
+    // Getter methods
+    public String getCardNumber() {
+        return cardNumber;
+    }
+
+    public String getUserName() {
+        return userName;
+    }
+
+    public String Address() {
+        return Address;
+    }
+
+    public int number() {
+        return number;
+    }
+
+}
+
+
+
+
+ class practice {
 
  
     public static void main(String[] args) {
        
         
-        Complex c = new Complex(4,0);
-        c.printComplex();
+        // Complex c = new Complex(4,0);
+        // c.printComplex();
+
+        AtmDetails atm = new AtmDetails();
+        
+        atm.username = "Pankaj Thakur";
+        
+        atm.setPassword("124512pankaj");
+        
+        System.out.println(atm.getpassWord());
+
+        atm.Address = " Vrundavan chowkdi Wageshwari Society ";
+
+        
+        
         
         
     }
 }
+
+
+
 
 
 

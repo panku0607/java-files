@@ -4,14 +4,14 @@ import Strings.strings;
 
 public class Oops {
     public static void main(String[] args) {
-        Pen p1 = new Pen();
-        p1.setColor("Violet");
-        System.out.println(p1.getColor());
-        p1.setTip(5);
-        System.out.println(p1.getTip());
+        // Pen p1 = new Pen();
+        // p1.setColor("Violet");
+        // System.out.println(p1.getColor());
+        // p1.setTip(5);
+        // System.out.println(p1.getTip());
 
-        p1.setColor("yellow");
-        System.out.println(p1.getColor());
+        // p1.setColor("yellow");
+        // System.out.println(p1.getColor());
 
 
 
@@ -20,6 +20,7 @@ public class Oops {
         myAcc.username = "vcbachg";
         myAcc.setPassword("Pankaj Thakur");
         System.out.println(myAcc.username);
+        System.out.println(myAcc.getPassword(null));
         
     }
 }
@@ -56,8 +57,13 @@ class Pen{
 class bankAccount{
     public String username;
     private String password;
+
     public void setPassword(String pwd){
         password = pwd;
+    }
+     
+    public String getPassword(String pwd){
+        return password;
     }
 }
 

@@ -74,9 +74,9 @@ public class strings {
         // String path = "WNEENESENNN";
         // System.out.println(getShortestPath(path));
 
-        String s1 = "Tony";
-        String s2 = "Tony";
-        String s3 = new String("Tony");
+        // String s1 = "Tony";
+        // String s2 = "Tony";
+        // String s3 = new String("Tony");
         // if(s1 == s2 ){
         //     System.out.println("strings aree equal");
         // }
@@ -90,12 +90,26 @@ public class strings {
         // else{
         //     System.out.println("strings aree not equal"); 
         // }
-        if(s1.equals(s3)){
-            System.out.println("strings aree equal");
-        }
-        else{
-            System.out.println("strings aree not equal"); 
-        }
+        // if(s1.equals(s3)){
+        //     System.out.println("strings aree equal");
+        // }
+        // else{
+        //     System.out.println("strings aree not equal"); 
+        // }
+            String str = "hit";
+            for (int i = 0; i < str.length(); i++) {
+                
+                for(char ch = 'a' ; ch<= 'c' ; ch++){
+                    char repl[] = str.toCharArray();
+                      repl[i] = ch ; 
+                    String word  = new String(repl);
+
+                    System.out.println(word);
+                    
+                }
+                
+            }
+       
         }
     }
 

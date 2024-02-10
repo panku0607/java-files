@@ -84,15 +84,20 @@ public class practiceARRAY {
         // System.out.println(nums.size());
 
 
-        ArrayList<Integer> arr = new ArrayList<>();
-        arr.add(1);
-        arr.add(100);
-        arr.add(200);
-        arr.add(1);
-        arr.add(100);
-        int key = 1;
-        System.out.println(mostFrequent(arr, key));
+        // ArrayList<Integer> arr = new ArrayList<>();
+        // arr.add(1);
+        // arr.add(100);
+        // arr.add(200);
+        // arr.add(1);
+        // arr.add(100);
+        // int key = 1;
+        // System.out.println(mostFrequent(arr, key));
 
+
+        int arr[][] = new int[3][3];
+        for(int i =0; i < arr.length; i++){
+            int e = arr[0][i];
+        }
 
     }
 }

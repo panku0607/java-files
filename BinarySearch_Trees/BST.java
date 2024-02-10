@@ -33,6 +33,7 @@ public class BST {
         return root;
 
     }
+    
 
     public static void inOrder(Node root) {
         if (root == null) {
@@ -88,6 +89,7 @@ public class BST {
         }
         return root;
     }
+    
 
     public static Node findInorderSuccessor(Node root) {
         while (root.left != null) {
@@ -164,6 +166,7 @@ public class BST {
 
         inOrder(root);
         System.out.println();
+        
 
     // //  printInRange(root, 10, 15);
 

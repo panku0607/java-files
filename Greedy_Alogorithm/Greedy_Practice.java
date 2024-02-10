@@ -1,11 +1,6 @@
 package Greedy_Alogorithm;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.Comparator;
 
-import EXAMS.forEachLoop;
 
 import java.util.*;
 
@@ -116,13 +111,13 @@ public class Greedy_Practice {
 
 
 
-// // kth odd largest element
-        // int p[] = {-3 , 3};
-        // int k;
+// kth odd largest element
+        int p[] = {-3 , 3};
+        
 
-        // System.out.println(kthLargestElemnt(p , 1));
+        System.out.println(kthLargestElemnt(p , 1));
 
-        //Lexicographically smallest string of length N and sum K
+        // //Lexicographically smallest string of length N and sum K
         char ch[] = lexo_small(5, 42);
         System.out.println(ch);
 

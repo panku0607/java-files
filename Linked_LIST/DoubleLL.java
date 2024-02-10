@@ -86,6 +86,7 @@ public class DoubleLL {
             int val = tail.data;
             head = tail = null ;
             size -- ;
+            return val;
         }
 
         Node temp = head;

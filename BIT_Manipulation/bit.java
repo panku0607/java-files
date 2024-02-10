@@ -84,9 +84,7 @@ public class bit {
             System.out.println(a + " " + b);
         }
 
-        public static  name() {
-            
-        }
+        
 
 
 
@@ -109,9 +107,14 @@ public class bit {
     //    int x = 0 ;
     //    System.out.println(-~x);
 
-    for(char ch = 'A' ; ch <= 'Z' ; ch++){
-        System.out.println((char)(ch | ' '));
-    }
+    // for(char ch = 'A' ; ch <= 'Z' ; ch++){
+    //     System.out.println((char)(ch | ' '));
+    // }
+
+    System.out.println(6 ^ 7);
+    System.out.println(3 << 3);
+    System.out.println((float) (5 >> 2));
+
 
 
     }
