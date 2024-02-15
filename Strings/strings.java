@@ -104,7 +104,7 @@ public class strings {
                       repl[i] = ch ; 
                     String word  = new String(repl);
 
-                    System.out.println(word);
+                    // System.out.println(word);
                     
                 }
                 

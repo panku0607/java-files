@@ -25,7 +25,7 @@ public class subarrays {
         System.out.println("total subarray is : " + ts);
     }
 
-              // Brute force Array 
+              // Brute force Approach
 
         public static void maxSubarraySum(int numbers[]){ // O(n^3)
            int currSum = 0;
@@ -91,12 +91,12 @@ public class subarrays {
 
 
     public static void main(String[] args) {
-        int numbers[] = {-2,-3,-3};
+        int numbers[] = {-2,-1};
         
       // subArrays(numbers);
       // maxSubarraySum(numbers);
-      // prefixSum(numbers);
-         kadanes(numbers);
+      prefixSum(numbers);
+        //  kadanes(numbers);
 
     }
 }
