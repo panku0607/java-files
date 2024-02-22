@@ -53,6 +53,18 @@ public class Classroom_map {
         // }
         
 
+        HashMap<String , Integer> map = new HashMap<>();
+        map.put("a", 10000);
+        map.put("b", 55000);
+        map.put("c", 44300);
+        map.put("e", 21);
+
+      Integer r1 =  map.putIfAbsent("e", 14234);
+
+        System.out.println(r1);
+
+        System.out.println(map);
+ 
 
  
           

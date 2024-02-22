@@ -52,12 +52,12 @@ public class strings {
         // String str = "abcd";
         // String str2 = new String("xyz@#1234");
 
-        // // Strings are IMMUTABLE
-        // Scanner sc = new Scanner(System.in);
-        // String name = sc.nextLine();
-        // System.out.println(name);
-        // String fullName = "Pankaj Thakur";
-        // System.out.println(fullName.length());
+        // Strings are IMMUTABLE
+        Scanner sc = new Scanner(System.in);
+        String name = sc.nextLine();
+        System.out.println(name);
+        String fullName = "Pankaj Thakur";
+        System.out.println(fullName.length());
 
         // concatenation
         // String firstName = "Pankaj";
@@ -104,7 +104,7 @@ public class strings {
                       repl[i] = ch ; 
                     String word  = new String(repl);
 
-                    // System.out.println(word);
+                    System.out.println(word);
                     
                 }
                 
